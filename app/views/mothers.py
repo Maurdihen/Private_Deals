@@ -1,4 +1,4 @@
-from container import mother_serv
+from app.container import mother_serv
 from app.dao.model.mother import MotherSchema
 
 from flask_restx import Namespace, Resource

@@ -1,4 +1,4 @@
-from container import student_serv
+from app.container import student_serv
 from app.dao.model.student import StudentSchema
 
 from flask_restx import Namespace, Resource

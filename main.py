@@ -2,10 +2,7 @@ from flask import Flask
 from flask_restx import Api
 
 from app.config import Config
-from app.dao.model.father import Father
-from app.dao.model.mother import Mother
-from app.dao.model.student import Student
-from setup_db import db
+from app.setup_db import db
 
 from app.views.fathers import father_ns
 from app.views.mothers import mother_ns

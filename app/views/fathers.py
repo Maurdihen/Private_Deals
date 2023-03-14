@@ -1,4 +1,4 @@
-from container import father_serv
+from app.container import father_serv
 from app.dao.model.father import FatherSchema
 
 from flask_restx import Namespace, Resource
