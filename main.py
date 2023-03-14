@@ -5,7 +5,11 @@ from app.config import Config
 from app.dao.model.father import Father
 from app.dao.model.mother import Mother
 from app.dao.model.student import Student
-from app.setup_db import db
+from setup_db import db
+
+from app.views.fathers import father_ns
+from app.views.mothers import mother_ns
+from app.views.students import student_ns
 
 api = Api(doc='/docs')
 
@@ -20,6 +24,10 @@ def create_app(config_object):
 def register_extensions(app):
     db.init_app(app)
     api.init_app(app)
+    api.add_namespace(father_ns)
+    api.add_namespace(mother_ns)
+    api.add_namespace(student_ns)
+
 #     create_data(app, db)
 #
 #
